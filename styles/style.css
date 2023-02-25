@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black url("../images/bg.jpg") center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 30px 10px 10px;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 5px;
+  margin: 0 auto;
+  height: 290px;
+  list-style: none;
+}
+
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card-side img, svg {
+  width: 190px;
+  height: 290px;
+  border-radius: 15px;
+}
+
+.card-side {
+  transition: all 0.3s ease;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card-side.back {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card-side.front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+  transform: rotateY(0deg);
+}
+
+.card-side.front {
+  animation: flip 2s linear alternate 2;
+}
+
+.card-side.back {
+  animation: flipReverse 2s linear alternate 2;
+}
+
+@keyframes flip {
+  to {
+    transform: rotateY(180deg);
+  }
+}
+@keyframes flipReverse {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
