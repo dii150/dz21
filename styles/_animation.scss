@@ -1,0 +1,15 @@
+@keyframes flip {
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes flipReverse {
+  from {
+    transform: rotateY(180deg);
+  }
+
+  to {
+    transform: rotateY(0deg);
+  }
+}

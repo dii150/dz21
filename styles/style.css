@@ -1,3 +1,16 @@
+@keyframes flip {
+  to {
+    transform: rotateY(180deg);
+  }
+}
+@keyframes flipReverse {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
